@@ -24,17 +24,15 @@
         }
 
         .main-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .main-content img {
-            max-width: 300px;
+            display: block;
+            max-width: 100%;
             height: auto;
-            margin-left: 20px; /* Adjust the spacing between text and image */
+            margin: 20px auto; /* Center the image */
         }
 
         a {
@@ -46,35 +44,29 @@
             text-decoration: underline;
         }
 
-        h2 {
-            color: #007bff;
-            margin-top: 30px;
-        }
-
-        ul {
-            list-style-type: none;
+        ul.more-links {
+            display: flex;
+            justify-content: space-between;
             padding: 0;
+            margin-top: 20px;
+            list-style-type: none;
         }
 
-        li {
-            margin-bottom: 10px;
-        }
-
-        .more-links li {
-            display: block;
+        ul.more-links li {
+            width: 23%; /* Adjust width for equal spacing */
+            text-align: center;
             background-color: #ffffff;
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 10px;
         }
 
-        .more-links li a {
+        ul.more-links li a {
             color: #007bff;
             text-decoration: none;
         }
 
-        .more-links li a:hover {
+        ul.more-links li a:hover {
             text-decoration: underline;
         }
     </style>
@@ -89,17 +81,11 @@
         <img src="https://github.com/nnewsh/nnewsh.github.io/raw/main/20240222_172939.jpg" alt="Profile Picture">
     </div>
 
-    <h2>Contact</h2>
-
-    <p>You can reach me at <a href="mailto:nnewsh@ucsb.edu">nnewsh@ucsb.edu</a>.</p>
-
-    <h2>More:</h2>
-
     <ul class="more-links">
-        <li><a href="mailto:nnewsh@ucsb.edu" target="_blank">Email</a></li>
         <li><a href="https://twitter.com/nnewsh_" target="_blank">Twitter</a></li>
         <li><a href="https://scholar.google.com/citations?user=PKwwzgoAAAAJ&hl=en&oi=ao" target="_blank">Google Scholar</a></li>
         <li><a href="https://github.com/nnewsh" target="_blank">GitHub</a></li>
+        <li><a href="mailto:nnewsh@ucsb.edu" target="_blank">Email</a></li>
     </ul>
 
 </body>
