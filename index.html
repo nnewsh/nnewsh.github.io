@@ -17,22 +17,24 @@
             text-align: center;
         }
 
+        .main-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .main-content img {
+            max-width: 300px;
+            height: auto;
+            margin-left: 20px; /* Adjust the spacing between text and image */
+        }
+
         p {
             font-size: 16px;
             line-height: 1.6;
             margin-bottom: 20px;
-        }
-
-        .main-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .main-content img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            margin: 20px auto; /* Center the image */
         }
 
         a {
@@ -46,24 +48,22 @@
 
         ul.more-links {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             padding: 0;
             margin-top: 20px;
             list-style-type: none;
         }
 
         ul.more-links li {
-            width: 23%; /* Adjust width for equal spacing */
             text-align: center;
-            background-color: #ffffff;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         ul.more-links li a {
             color: #007bff;
             text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         ul.more-links li a:hover {
@@ -76,10 +76,12 @@
     <h1>Dr Niall Newsham</h1>
 
     <div class="main-content">
-        <p>Hi, I am Dr Niall Newsham, a postdoc at the <a href="https://move.geog.ucsb.edu/" target="_blank">MOVE research lab</a> within <a href="https://www.ucsb.edu/" target="_blank">UC Santa Barbara.</a> I am a population geographer interested in understanding contemporary demographic change between places and across space. My research intersects demography and geography, exploring themes such as population decline, low fertility, migration flows, and mobility trajectories using advanced quantitative methods. I hold a Ph.D. in Human Geography and an M.Sc. in Demography and Population Studies from the <a href="https://www.liverpool.ac.uk/geographic-data-science/" target="_blank">University of Liverpool, UK.</a> I have also spent time as a visiting scholar at the Max Planck Institute of Demography Research in Rostock, Germany, Centro de Estudios Demográficos in Barcelona, Spain, and the Center for Spatial Data Science at the University of Chicago, USA. You can keep up to date with my research and access my journal articles, code, and courses here.</p>
+        <p>Hi, I am Dr Niall Newsham, a postdoc at the <a href="https://move.geog.ucsb.edu/" target="_blank">MOVE research lab</a> within <a href="https://www.ucsb.edu/" target="_blank">UC Santa Barbara.</a> I am a population geographer interested in understanding contemporary demographic change between places and across space. My research intersects demography and geography, exploring themes such as population decline, low fertility, migration flows, and mobility trajectories using advanced quantitative methods. I hold a Ph.D. in Human Geography and an M.Sc. in Demography and Population Studies from the <a href="https://www.liverpool.ac.uk/geographic-data-science/" target="_blank">University of Liverpool, UK.</a> I have also spent time as a visiting scholar at the Max Planck Institute of Demography Research in Rostock, Germany, Centro de Estudios Demográficos in Barcelona, Spain, and the Center for Spatial Data Science at the University of Chicago, USA. You can keep up to date with my research by accessing my journal articles, code, and courses here.</p>
 
         <img src="https://github.com/nnewsh/nnewsh.github.io/raw/main/20240222_172939.jpg" alt="Profile Picture">
     </div>
+
+    <h2>More:</h2>
 
     <ul class="more-links">
         <li><a href="https://twitter.com/nnewsh_" target="_blank">Twitter</a></li>
