@@ -408,9 +408,15 @@ Prerequisites
 </div>
 <p><br></p>
 <p>This demonstration makes use of Python binding packages, <a href="https://keras.io/">Keras</a> and <a href="https://tensorflow.rstudio.com/">tensorflow</a> to facilitate the
-LSTM forecast in R. These can be installed by following instructions <a href="https://tensorflow.rstudio.com/install/">here</a>. NOTE: these
-binding packages also require the installation of Python version 3.1.0,
-later versions of Python may be incompatible.</p>
+LSTM forecast in R. First, it is imperative that Python version 3.10 is
+installed on your device. This version can be downloaded <a href="python.org/downloads/release/python-3100">here</a></p>
+<p>Then, the TensorFlow and Keras packages can be installed by running
+the following lines of code:</p>
+<pre class="r"><code>install.packages(&quot;keras&quot;)
+
+library(keras)
+
+install_keras()</code></pre>
 <p>The following R packages are also essential for the
 demonstration:</p>
 <p><u>tensorflow</u> - Binding package, backend for machine learning</p>
@@ -864,12 +870,12 @@ errors relative to the actual values.</p>
   
 head(predicted_targets)</code></pre>
 <pre><code>##          [,1]
-## [1,] 10462.88
-## [2,] 12606.97
-## [3,] 11295.72
-## [4,] 13084.14
-## [5,] 13409.43
-## [6,] 12239.25</code></pre>
+## [1,] 10484.14
+## [2,] 12631.17
+## [3,] 11315.35
+## [4,] 13128.47
+## [5,] 13427.46
+## [6,] 12265.86</code></pre>
 <p><br> Finally, we compare our predicted values with the actual 2020
 population size figures. We do this by re-reading our original data set,
 extracting only the columns corresponding to 2020 and area IDs, and
@@ -885,9 +891,9 @@ Accuracy &lt;- cbind(actual.values,predicted_targets)
 Accuracy$APE &lt;- abs((Accuracy$X2020 - Accuracy$predicted_targets) / Accuracy$X2020) * 100
 
 mean(Accuracy$APE)</code></pre>
-<pre><code>## [1] 0.2663013</code></pre>
+<pre><code>## [1] 0.6721434</code></pre>
 <pre class="r"><code>median(Accuracy$APE)</code></pre>
-<pre><code>## [1] 0.1773505</code></pre>
+<pre><code>## [1] 0.4975767</code></pre>
 
 
 
