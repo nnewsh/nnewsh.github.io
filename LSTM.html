@@ -399,6 +399,8 @@ series of annual population values (2000 - 2019) for a total of 9,054
 municipalities of the UK. The LSTM is designed to learn of temporal
 dependencies in this full set of input data, and consider it in
 predictions of population size in 2020 for individual areas.</p>
+<p>The full code contained in this document is also available as a
+standalone R file, <a href="https://github.com/nnewsh/nnewsh.github.io/blob/main/LSTM.course.R">here</a></p>
 <br>
 <hr>
 <div id="title-block">
@@ -467,9 +469,9 @@ sequence of input data (time steps), and number of variables
 </ul>
 <p>The majority of the code deals with addressing these assumptions,
 using a variety of data wrangling techniques.</p>
-<p>The first step is to download the time series data, available <a href="https://github.com/nnewsh/nnewsh.github.io">here</a> It contains a
-spatial panel dataset comprising annual population size estimates for
-municipalities in the UK</p>
+<p>The first step is to download the time series data, available <a href="https://github.com/nnewsh/nnewsh.github.io/blob/main/UK.csv">here</a>
+It contains a spatial panel dataset comprising annual population size
+estimates for municipalities in the UK</p>
 <p><br></p>
 <pre class="r"><code># Set the root directory for all chunks
 knitr::opts_knit$set(root.dir = &quot;C:/Users/niall/Downloads/&quot;)</code></pre>
@@ -872,12 +874,12 @@ errors relative to the actual values.</p>
   
 head(predicted_targets)</code></pre>
 <pre><code>##          [,1]
-## [1,] 10441.34
-## [2,] 12574.11
-## [3,] 11270.87
-## [4,] 13046.06
-## [5,] 13375.24
-## [6,] 12207.37</code></pre>
+## [1,] 10453.79
+## [2,] 12589.81
+## [3,] 11284.51
+## [4,] 13074.53
+## [5,] 13386.50
+## [6,] 12226.52</code></pre>
 <p><br> Finally, we compare our predicted values with the actual 2020
 population size figures. We do this by re-reading our original data set,
 extracting only the columns corresponding to 2020 and area IDs, and
@@ -893,9 +895,9 @@ Accuracy &lt;- cbind(actual.values,predicted_targets)
 Accuracy$APE &lt;- abs((Accuracy$X2020 - Accuracy$predicted_targets) / Accuracy$X2020) * 100
 
 mean(Accuracy$APE)</code></pre>
-<pre><code>## [1] 0.2413288</code></pre>
+<pre><code>## [1] 0.2009625</code></pre>
 <pre class="r"><code>median(Accuracy$APE)</code></pre>
-<pre><code>## [1] 0.1824615</code></pre>
+<pre><code>## [1] 0.1450272</code></pre>
 <p>Our mean and median APE figures inform us of the average accuracy of
 our 2020 population forecast with the actual value</p>
 <br>
